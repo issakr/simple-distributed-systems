@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="rootVBox" prefHeight="650.0" stylesheets="@../css/verwaltungStyles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vs.anzeigetafel.controller.VerwaltungController">
+   <children>
+      <HBox prefHeight="656.0" prefWidth="800.0">
+         <children>
+            <Pane prefHeight="680.0" prefWidth="220.0">
+               <children>
+                  <Label fx:id="newMSGLabel" layoutX="58.0" layoutY="141.0" />
+                  <Button fx:id="newMSGButton" alignment="CENTER" layoutX="20.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleButtons" prefHeight="70.0" prefWidth="180.0" text="Nachricht verfassen" textAlignment="RIGHT">
+                     <graphic>
+                        <ImageView fx:id="newMsgImage" fitHeight="40.0" fitWidth="58.0" onMouseClicked="#handleButtons" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/neu-erstellen2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label fx:id="abbrechenLabel" layoutX="29.0" layoutY="590.0" />
+                  <Button fx:id="abbrechenButton" cancelButton="true" layoutX="20.0" layoutY="432.0" mnemonicParsing="false" onAction="#handleButtons" prefHeight="70.0" prefWidth="180.0" text="Zurück Zur Tafel">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/zurueck.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label fx:id="speichernLabel1" layoutX="131.0" layoutY="590.0" />
+                  <Button fx:id="changeNachrichtButton" layoutX="20.0" layoutY="138.0" mnemonicParsing="false" onAction="#changeNachricht" prefHeight="70.0" prefWidth="180.0" text="Nachricht aendern">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/bearbeiten.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="loeschenButton" layoutX="20.0" layoutY="322.0" mnemonicParsing="false" onAction="#loescheNachricht" prefHeight="70.0" prefWidth="180.0" text="Nachricht loeschen">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/icons8-delete-26.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </Pane>
+            <VBox>
+               <children>
+                  <Pane prefHeight="60.0" prefWidth="580.0">
+                     <children>
+                        <Label layoutX="6.0" layoutY="8.0" prefHeight="35.0" prefWidth="80.0" styleClass="titre" text="Tafel :">
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </Label>
+                        <Text fx:id="tafelNameTitel" layoutX="73.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titre" text="tafelname" />
+                        <Label layoutX="196.0" layoutY="8.0" prefHeight="35.0" prefWidth="80.0" styleClass="titre" text="User :">
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </Label>
+                        <Text fx:id="userNameTitel" layoutX="253.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titre" text="username" />
+                        <Text fx:id="koordiTitel" layoutX="411.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titre" text="Koordi" />
+                     </children>
+                  </Pane>
+                  <TableView fx:id="msgTable" editable="true" prefHeight="442.0" prefWidth="580.0">
+                     <columns>
+                        <TableColumn fx:id="userNameColumn" prefWidth="130.0" text="UserName" />
+                        <TableColumn fx:id="titelColumn" prefWidth="134.0" text="Titel" />
+                        <TableColumn fx:id="eigeneTafelColumn" prefWidth="157.0" text="ist auf eigener Tafel" />
+                        <TableColumn fx:id="alleTafelnColumn" prefWidth="158.0" text="ist auf allen Tafeln" />
+                     </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Pane id="footerPane" fx:id="footerPane" prefHeight="262.0" prefWidth="800.0">
+         <children>
+            <ImageView id="footerImage" fx:id="foterImage" fitHeight="258.0" fitWidth="800.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/htwsaarlogoFooter.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</VBox>

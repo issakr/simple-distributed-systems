@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="rootVBox" prefHeight="500.0" prefWidth="800.0" 
+	stylesheets="@../css/neuMsgStyles.css" xmlns="http://javafx.com/javafx/8" 
+	xmlns:fx="http://javafx.com/fxml/1" 
+	fx:controller="vs.anzeigetafel.controller.NeuMsgController">
+   <children>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="152.0" minHeight="10.0" prefHeight="103.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="110.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="196.0" minHeight="10.0" prefHeight="78.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="161.0" minHeight="10.0" prefHeight="161.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="TitelTextField" prefHeight="25.0" prefWidth="187.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></TextField>
+            <TextArea fx:id="InhaltTextArea" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin></TextArea>
+            <CheckBox fx:id="publishCheckBox" mnemonicParsing="false" text="Veroeffentlichen" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <Label fx:id="msgTitelLabel" text="Titel" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="100.0" right="100.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="inhaltLabel" text="Inhalt" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="100.0" right="100.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="titelLabel" prefHeight="17.0" prefWidth="241.0" text="Neu Nachricht verfassen">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Label>
+            <SplitPane orientation="VERTICAL" prefHeight="32.0" prefWidth="250.0" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </SplitPane>
+            <SplitPane orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </SplitPane>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <HBox>
+         <children>
+            <Pane prefHeight="73.0" prefWidth="496.0" />
+            <Button fx:id="abbrechenButton" cancelButton="true" mnemonicParsing="false" onAction="#handleAbbrechen" prefHeight="50.0" prefWidth="130.0" text="Abbrechen" textAlignment="JUSTIFY">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/zurueck.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Pane prefHeight="73.0" prefWidth="36.0" />
+            <Button fx:id="speichernButton" defaultButton="true" mnemonicParsing="false" onAction="#handleSpeichern" prefHeight="50.0" prefWidth="130.0" text="Speichern">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/speichern.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

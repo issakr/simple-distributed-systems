@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="rootVBox" prefHeight="500.0" prefWidth="500.0" stylesheets="@../css/loginStyles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vs.anzeigetafel.controller.LoginController">
+   <children>
+      <GridPane fx:id="eingabeGridPane" alignment="center" hgap="10" prefHeight="492.0" prefWidth="500.0" vgap="10">
+      <padding>
+            <Insets bottom="10" left="25" right="25" top="25" />
+         </padding>
+         <children>
+         
+          	<Text fx:id="welcomeText" text="Welcome" GridPane.columnSpan="2" />   
+             <Label text="User Name:" GridPane.rowIndex="2" />   
+             <TextField fx:id="loginField" GridPane.columnIndex="1" GridPane.rowIndex="2" /> 
+             <Label text="Password:" GridPane.rowIndex="3" />  
+             <PasswordField fx:id="passField" GridPane.columnIndex="1" GridPane.rowIndex="3" />         
+             <HBox alignment="bottom_right" prefHeight="16.0" prefWidth="23.0" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                    <children>
+               		 	<Button fx:id="anmeldungButton" contentDisplay="RIGHT" defaultButton="true" onAction="#handleLogin" prefHeight="48.0" prefWidth="120.0" text="Anmelden">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/login.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                    </children>
+         	</HBox>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      	        
+      	        
+      </GridPane>
+      <Pane prefHeight="99.0" prefWidth="500.0">
+         <children>
+            <Separator layoutY="-52.0" prefHeight="32.0" prefWidth="500.0" />
+            <ImageView fx:id="footerImage1" fitHeight="103.0" fitWidth="500.0" layoutY="-27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/htwsaarlogoFooter.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</VBox>

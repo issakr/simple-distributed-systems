@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox id="rootVBox" fx:id="rootVBox" stylesheets="@../css/tafelStyles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vs.anzeigetafel.controller.TafelController">
+   <children>
+      <HBox prefHeight="498.0" prefWidth="800.0">
+         <children>
+            <Pane fx:id="buttonsPane" prefHeight="680.0" prefWidth="220.0">
+               <children>
+                  <Button fx:id="refreshButton" layoutX="20.0" layoutY="40.0" mnemonicParsing="false" onAction="#refreshTafel" prefHeight="70.0" prefWidth="180.0" text="Aktualisieren">
+                     <graphic>
+                        <ImageView id="updateIcon" fx:id="updateIcon" fitHeight="40.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/update.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="verwaltungButton" layoutX="20.0" layoutY="138.0" mnemonicParsing="false" onAction="#handleButtons" prefHeight="70.0" prefWidth="180.0" text="Verwaltung">
+                     <graphic>
+                        <ImageView fx:id="newMsgImage" fitHeight="40.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/neu-erstellen2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="logoutButton" layoutX="20.0" layoutY="322.0" mnemonicParsing="false" onAction="#handleButtons" prefHeight="70.0" prefWidth="180.0" text="   Abmelden">
+                     <graphic>
+                        <ImageView fx:id="abmeldenIcon" fitHeight="40.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="exitButton" layoutX="20.0" layoutY="432.0" mnemonicParsing="false" onAction="#handleButtons" prefHeight="70.0" prefWidth="180.0" text="Programm verlassen" />
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Pane>
+            <VBox>
+               <children>
+                  <Pane prefHeight="60.0" prefWidth="580.0">
+                     <children>
+                        <Label layoutX="6.0" layoutY="8.0" prefHeight="35.0" prefWidth="80.0" styleClass="titre" text="Tafel :">
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </Label>
+                        <Text fx:id="tafelNameTitel" layoutX="73.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titre" text="tafelname" />
+                        <Label layoutX="196.0" layoutY="8.0" prefHeight="35.0" prefWidth="80.0" styleClass="titre" text="User :">
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </Label>
+                        <Text fx:id="userNameTitel" layoutX="253.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titre" text="username" />
+                        <Text fx:id="koordiTitel" layoutX="411.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titre" text="Koordi" />
+                     </children>
+                  </Pane>
+                  <TableView fx:id="tafelTable" prefHeight="443.0" prefWidth="580.0">
+                     <columns>
+                        <TableColumn fx:id="userNameColumn" prefWidth="106.0" text="UserName" />
+                        <TableColumn fx:id="titelColumn" prefWidth="102.0" text="Titel" />
+                        <TableColumn fx:id="publicColumn" prefWidth="75.0" text="Public" />
+                        <TableColumn fx:id="inhaltColumn" prefWidth="371.0" text="Nachrichten" />
+                     </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Pane id="footerPane" fx:id="footerPane" prefHeight="151.0" prefWidth="800.0">
+         <children>
+            <ImageView id="footerImage" fx:id="foterImage" fitHeight="143.0" fitWidth="800.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/htwsaarlogoFooter.jpg" />
+               </image>
+            </ImageView>
+         </children></Pane>
+   </children>
+</VBox>
